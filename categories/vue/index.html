@@ -144,7 +144,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 分鐘 閱讀文 (大約 273 個字)
+                    2 分鐘 閱讀文 (大約 274 個字)
                 </span>
                 
                 
@@ -161,13 +161,16 @@
 <h3 id="2-調整檔案路徑"><a href="#2-調整檔案路徑" class="headerlink" title="2. 調整檔案路徑"></a><strong>2. 調整檔案路徑</strong></h3><ul>
 <li><a href="https://cli.vuejs.org/zh/guide/deployment.html#github-pages">GitHub Pages 手動推送更新</a><br>在根目錄新創建 <code>vue.config.js</code> 檔案以及<code>deploy.sh</code> 檔案</li>
 </ul>
-<h3 id="2-1-新增-vue-config-js-檔案"><a href="#2-1-新增-vue-config-js-檔案" class="headerlink" title="2-1. 新增 vue.config.js 檔案"></a><strong>2-1. 新增 <code>vue.config.js</code> 檔案</strong></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    publicPath: process.env.NODE_ENV === <span class="string">'production'</span></span><br><span class="line">      ? <span class="string">'/你的 repository 名稱/dist/'</span></span><br><span class="line">      : <span class="string">'/'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.imgur.com/ZmtCyv9.png" alt=""></p>
-<h3 id="2-2-新增-deploy-sh-檔案"><a href="#2-2-新增-deploy-sh-檔案" class="headerlink" title="2-2. 新增 deploy.sh 檔案"></a><strong>2-2. 新增 <code>deploy.sh</code> 檔案</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 發生錯誤時執行終止指令</span></span><br><span class="line"><span class="built_in">set</span> -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打包編譯</span></span><br><span class="line">npm run build</span><br><span class="line"></span><br><span class="line"><span class="comment"># 移動到打包資料夾下，若你有調整的話打包後的資料夾請務必調整</span></span><br><span class="line"><span class="built_in">cd</span> dist</span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署到自定義網域</span></span><br><span class="line"><span class="comment"># echo 'www.example.com' &gt; CNAME</span></span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m <span class="string">'deploy'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署到 https://&lt;USERNAME&gt;.github.io</span></span><br><span class="line"><span class="comment"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git master</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 部署到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;</span></span><br><span class="line"><span class="comment"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;REPO&gt;.git master:gh-pages</span></span><br><span class="line"><span class="comment"># 以這個專案來講就要改成這樣以下這樣，下面是走 ssh 模式</span></span><br><span class="line">git push -f git@github.com:hsiangfeng/HexfootMusic.git master:gh-pages</span><br><span class="line"><span class="comment"># 除此之外，也可以改走 HTTPS 模式</span></span><br><span class="line"><span class="comment"># git push -f https://github.com/hsiangfeng/HexfootMusic.git master:gh-pages</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> -</span><br></pre></td></tr></table></figure>
-<p>在終端機輸入 (git bash)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sh deploy.sh</span><br></pre></td></tr></table></figure>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/08/05/vue-cli-github-pages/#more">繼續閱讀</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -361,7 +364,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/HEXO/" style="font-size: 15px;">HEXO</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/flex/" style="font-size: 15px;">flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/%E5%88%87%E7%89%88/" style="font-size: 20px;">切版</a>
+        <a href="/tags/Github/" style="font-size: 20px;">Github</a> <a href="/tags/HEXO/" style="font-size: 15px;">HEXO</a> <a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/flex/" style="font-size: 15px;">flex</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/%E5%88%87%E7%89%88/" style="font-size: 20px;">切版</a>
     </div>
 </div>
     
@@ -540,7 +543,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Github/">
                         <span class="tag">Github</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -774,7 +777,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/Github/">
                         <span class="tag">Github</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
