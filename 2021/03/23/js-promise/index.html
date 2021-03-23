@@ -7,25 +7,25 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>標籤: 切版 - 菜鳥學前端 | JavaScript | SEO | 技術</title>
+<title>JS 觀念 - Promise 非同步 - 菜鳥學前端 | JavaScript | SEO | 技術</title>
 
 
-    <meta name="description" content="記錄學習前端的歷程，以及分享技術與生活。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="菜鳥學前端 | JavaScript | SEO | 技術">
-<meta property="og:url" content="https://kaychen1994.github.io/tags/%E5%88%87%E7%89%88/index.html">
+    <meta name="description" content="Promise 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。   Promise - MDN 使用 Promise - MDN   非同步觀念非同步行為會在所有程式碼執行完後才執行，因此看到非同步行為，執行順序就放最後。 就算 setTimeout 設定 0 秒，一樣不會改變它最後執行的順序。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS 觀念 - Promise 非同步">
+<meta property="og:url" content="https://kaychen1994.github.io/2021/03/23/js-promise/index.html">
 <meta property="og:site_name" content="菜鳥學前端 | JavaScript | SEO | 技術">
-<meta property="og:description" content="記錄學習前端的歷程，以及分享技術與生活。">
+<meta property="og:description" content="Promise 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。   Promise - MDN 使用 Promise - MDN   非同步觀念非同步行為會在所有程式碼執行完後才執行，因此看到非同步行為，執行順序就放最後。 就算 setTimeout 設定 0 秒，一樣不會改變它最後執行的順序。">
 <meta property="og:locale" content="zh_TW">
-<meta property="og:image" content="https://kaychen1994.github.io/images/og_image.png">
+<meta property="og:image" content="https://i.imgur.com/aUu4B4X.jpg">
+<meta property="article:published_time" content="2021-03-23T14:26:46.000Z">
+<meta property="article:modified_time" content="2021-03-23T14:28:38.520Z">
 <meta property="article:author" content="CHEN">
 <meta property="article:tag" content="JavaScript">
-<meta property="article:tag" content="SEO">
-<meta property="article:tag" content="前端">
-<meta property="article:tag" content="技術">
-<meta property="article:tag" content="HEXO">
+<meta property="article:tag" content="Promise">
+<meta property="article:tag" content="axios">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kaychen1994.github.io/images/og_image.png">
+<meta name="twitter:image" content="https://i.imgur.com/aUu4B4X.jpg">
 
 
 
@@ -67,7 +67,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="菜鳥學前端 | JavaScript | SEO | 技術" height="28">
+                <img src="/images/logo.svg" alt="JS 觀念 - Promise 非同步" height="28">
             
             </a>
         </div>
@@ -113,41 +113,30 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">標籤</a></li>
-            <li class="is-active"><a href="#" aria-current="page">切版</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-image">
-        <a href="/2020/07/30/css-flex/" class="image is-7by1">
-            <img class="thumbnail" src="https://i.imgur.com/XGTbHIs.png" alt="css3 flex 筆記">
-        </a>
+        <span  class="image is-7by1">
+            <img class="thumbnail" src="https://i.imgur.com/aUu4B4X.jpg" alt="JS 觀念 - Promise 非同步">
+        </span>
     </div>
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-07-30T13:42:32.000Z">2020-07-30</time>
+                <time class="level-item has-text-grey" datetime="2021-03-23T14:26:46.000Z">2021-03-23</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/css/">css</a>
+                <a class="has-link-grey -link" href="/categories/JavaScript/">JavaScript</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    7 分鐘 閱讀文 (大約 1047 個字)
+                    3 分鐘 閱讀文 (大約 489 個字)
                 </span>
                 
                 
@@ -156,26 +145,78 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/07/30/css-flex/">css3 flex 筆記</a>
+                JS 觀念 - Promise 非同步
             
         </h1>
         <div class="content">
-            <p><a href="https://codepen.io/peiqun/pen/WYzzYX">flex 六角線上模擬器</a></p>
-<p>為了要精進自己的切版技術，我報名了六角的網頁切版直播班，這幾天都在惡補 flex 的課程，以下就是我這周在上課做的筆記。</p>
-<blockquote>
-<p>傳統的 float 排版只能左右流動，因此無法應對現在多元的排版方式。Ex:置中、垂直、等距等等。</p>
+            <blockquote>
+<p><code>Promise</code> 物件代表一個即將完成、或失敗的非同步操作，以及它所產生的值。</p>
 </blockquote>
-<h3 id="flex-不只解決這些問題，還比-float-更有彈性，了解-flex-之後就可以做出更多樣化的網頁排版，所以-flex-是現在前端必學的超強大排版方式"><a href="#flex-不只解決這些問題，還比-float-更有彈性，了解-flex-之後就可以做出更多樣化的網頁排版，所以-flex-是現在前端必學的超強大排版方式" class="headerlink" title="flex 不只解決這些問題，還比 float 更有彈性，了解 flex 之後就可以做出更多樣化的網頁排版，所以 flex 是現在前端必學的超強大排版方式!"></a>flex 不只解決這些問題，還比 float 更有彈性，了解 flex 之後就可以做出更多樣化的網頁排版，所以 flex 是現在前端必學的超強大排版方式!</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise - MDN</a></li>
+<li><a href="https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Guide/Using_promises">使用 Promise - MDN</a></li>
+</ul>
+<p><img src="https://i.imgur.com/L6cigip.png" alt=""></p>
+<h2 id="非同步觀念"><a href="#非同步觀念" class="headerlink" title="非同步觀念"></a>非同步觀念</h2><p>非同步行為會在所有程式碼執行完後才執行，因此看到非同步行為，執行順序就放最後。</p>
+<p>就算 setTimeout 設定 0 秒，一樣不會改變它最後執行的順序。</p>
+<a id="more"></a>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getData</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'... 已取得遠端資料'</span>);</span><br><span class="line">  &#125;, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 請問取得資料的順序為何</span></span><br><span class="line"><span class="keyword">const</span> component = &#123;</span><br><span class="line">  init() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>); <span class="comment">// 順序 1</span></span><br><span class="line">    getData(); <span class="comment">// 順序 3</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>); <span class="comment">// 順序 2</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">component.init();</span><br></pre></td></tr></table></figure>
+
+<p>consle 結果 : </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">... 已取得遠端資料&#39;</span><br></pre></td></tr></table></figure>
+
+<p>而 <code>Promise</code> 是為了解決傳統非同步語法難以建構及管理的問題。</p>
+<hr>
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> promiseSetTimeout = <span class="function">(<span class="params">status</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">if</span> (status) &#123;</span><br><span class="line">        resolve(<span class="string">'promiseSetTimeout 成功'</span>)</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        reject(<span class="string">'promiseSetTimeout 失敗'</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;, <span class="number">0</span>);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Promise-基礎應用"><a href="#Promise-基礎應用" class="headerlink" title="Promise 基礎應用"></a>Promise 基礎應用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">promiseSetTimeout(<span class="literal">true</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+<p>consle 結果 : </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">promiseSetTimeout 成功</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Promise-串接"><a href="#Promise-串接" class="headerlink" title="Promise 串接"></a>Promise 串接</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">promiseSetTimeout(<span class="literal">true</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">1</span>, res);</span><br><span class="line">    <span class="keyword">return</span> promiseSetTimeout(<span class="literal">true</span>)</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="number">2</span>, res);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>consle 結果 : </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 &quot;promiseSetTimeout 成功&quot;</span><br><span class="line">2 &quot;promiseSetTimeout 成功&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Promise-失敗捕捉"><a href="#Promise-失敗捕捉" class="headerlink" title="Promise 失敗捕捉"></a>Promise 失敗捕捉</h3><p>promiseSetTimeout <strong>成功</strong>的話跑 <code>then</code> ，<strong>失敗</strong>的話跑 <code>catch</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">promiseSetTimeout(<span class="literal">false</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>consle 結果 : </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">promiseSetTimeout 失敗</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Promise-元件運用"><a href="#Promise-元件運用" class="headerlink" title="Promise 元件運用"></a>Promise 元件運用</h3><p>把非同步資料寫回 data</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> component = &#123;</span><br><span class="line">  data: &#123;&#125;,</span><br><span class="line">  init() &#123;</span><br><span class="line">    promiseSetTimeout(<span class="literal">true</span>)</span><br><span class="line">      .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.data.res = res; <span class="comment">// 非同步資料寫回 data</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.data.res);</span><br><span class="line">      &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">component.init();</span><br></pre></td></tr></table></figure>
+
+<p>consle 結果 : </p>
+<p><img src="https://i.imgur.com/zbIUapi.png" alt=""></p>
+<hr>
+<h2 id="使用-axios-套件串接遠端-API"><a href="#使用-axios-套件串接遠端-API" class="headerlink" title="使用 axios 套件串接遠端 API"></a>使用 axios 套件串接遠端 API</h2><ul>
+<li><a href="https://github.com/axios/axios">axios</a></li>
+<li><a href="https://randomuser.me/">練習 API</a></li>
+</ul>
+<h3 id="成功接收練習"><a href="#成功接收練習" class="headerlink" title="成功接收練習"></a>成功接收練習</h3><p>成功跑 <code>then</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'https://randomuser.me/api/'</span>)</span><br><span class="line">  .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res.data.results);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err.response);</span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>consle 結果 : </p>
+<p><img src="https://i.imgur.com/K0FVunX.png" alt=""></p>
+<h3 id="失敗接收練習"><a href="#失敗接收練習" class="headerlink" title="失敗接收練習"></a>失敗接收練習</h3><p>失敗跑 <code>catch</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">axios.get(<span class="string">'https://randomuser.me/api/err'</span>) <span class="comment">// 錯誤的 API</span></span><br><span class="line">  .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res.data.results);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(err.response); <span class="comment">// err.response 才能顯示失敗內容</span></span><br><span class="line">  &#125;)</span><br></pre></td></tr></table></figure>
+
+<p>consle 結果 : </p>
+<p><img src="https://i.imgur.com/ZlHO6IJ.png" alt=""></p>
+
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/07/30/css-flex/#more">繼續閱讀</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/JavaScript/" rel="tag">JavaScript</a>, <a class="has-link-grey -link" href="/tags/Promise/" rel="tag">Promise</a>, <a class="has-link-grey -link" href="/tags/axios/" rel="tag">axios</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -183,136 +224,30 @@
 
 
 
-
-
-
-
-
-    
 <div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/04/18/Week02-Flexbox-%E7%B6%B2%E9%A0%81%E6%8E%92%E7%89%88%E8%A1%93/" class="image is-7by1">
-            <img class="thumbnail" src="https://i.imgur.com/PUDWK3U.jpg" alt="Week02-Flexbox 網頁排版術">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-18T14:14:53.000Z">2020-04-18</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/css/">css</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    4 分鐘 閱讀文 (大約 576 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+    <div class="card-content">
+        <h3 class="menu-label has-text-centered">菜鳥學前端</h3>
+        <div class="buttons is-centered">
             
-                <a class="has-link-black-ter" href="/2020/04/18/Week02-Flexbox-%E7%B6%B2%E9%A0%81%E6%8E%92%E7%89%88%E8%A1%93/">Week02-Flexbox 網頁排版術</a>
-            
-        </h1>
-        <div class="content">
-            <p>這個禮拜切版直播班的主題是期待已久的 Flex !!!</p>
-<p>以前在學 float 跟 flex 都傻傻分不清楚，透過直播班還沒開課之前老師釋出的「Flex 精神時光屋」的教學與練習，幫助我釐清複雜的 Flex ~~</p>
-<p>學會 Flex 真的讓排版更輕鬆，省掉 <code>margin</code> 、 <code>padding</code> 推來推去的麻煩!</p>
-<p>這次切版直播班老師帶我們看了很多網頁的範例，透過互動回答也幫助我複習了 flex ，對 flex 的使用也更了解。</p>
         </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/04/18/Week02-Flexbox-%E7%B6%B2%E9%A0%81%E6%8E%92%E7%89%88%E8%A1%93/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
     </div>
 </div>
 
 
 
-
-
-
-
-
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/2020/04/13/week01-1px-%E4%B9%9F%E4%B8%8D%E5%B7%AE%E7%9A%84%E7%89%88%E5%9E%8B%E6%8E%A7%E5%88%B6%E8%A1%93/" class="image is-7by1">
-            <img class="thumbnail" src="https://i.imgur.com/uiX6gzb.jpg" alt="week01 - 1px 也不差的版型控制術">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-04-13T14:34:43.000Z">2020-04-13</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/css/">css</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    6 分鐘 閱讀文 (大約 865 個字)
-                </span>
-                
-                
-            </div>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2021/03/22/Shallow-Copy-vs-Deep-Copy/">
+                <span class="level-item">JS 觀念 - 物件傳參考特性、淺拷貝、深拷貝</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
         </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2020/04/13/week01-1px-%E4%B9%9F%E4%B8%8D%E5%B7%AE%E7%9A%84%E7%89%88%E5%9E%8B%E6%8E%A7%E5%88%B6%E8%A1%93/">week01 - 1px 也不差的版型控制術</a>
-            
-        </h1>
-        <div class="content">
-            <p>為了精進自己的切版能力，報名了六角學院推出的網頁切版直播班，這次上課讓我收穫很多，有複習到舊觀念也有增加新知識，以下為第一周上課的筆記。</p>
-<h3 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h3><p>老師有建議想要提升切版速度，熟悉 Emmet 很重要，也可以減少打錯字找不到 bug 的狀況出現。</p>
-<p>所以本周作業嘗試著全程使用 Emmet 做練習，雖然有些不習慣，但是真的有減少之前常常打錯字的問題。</p>
-</br>
-
-<h3 id="keybr-英打練習"><a href="#keybr-英打練習" class="headerlink" title="keybr 英打練習"></a>keybr 英打練習</h3><p><a href="https://www.keybr.com/profile/622bm29">我的 keybr profile 連結</a></p>
-<p>熟練英打也可以提升切版速度，因為有報名 21 天英打鍛鍊武道大會，所以持續都有在練習，也發現每天練 10 分鐘，真的可以積沙成多，每天都有進步一點點。</p>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2020/04/13/week01-1px-%E4%B9%9F%E4%B8%8D%E5%B7%AE%E7%9A%84%E7%89%88%E5%9E%8B%E6%8E%A7%E5%88%B6%E8%A1%93/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
         
     </div>
 </div>
-
-
-
-
-
-
 
 
 </div>
@@ -1072,7 +1007,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="菜鳥學前端 | JavaScript | SEO | 技術" height="28">
+                    <img src="/images/logo.svg" alt="JS 觀念 - Promise 非同步" height="28">
                 
                 </a>
                 <p class="is-size-7">
