@@ -137,7 +137,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分鐘 閱讀文 (大約 497 個字)
+                    3 分鐘 閱讀文 (大約 498 個字)
                 </span>
                 
                 
@@ -150,7 +150,13 @@
             
         </h1>
         <div class="content">
-            <h2 id="Vuex-主要的核心概念"><a href="#Vuex-主要的核心概念" class="headerlink" title="Vuex 主要的核心概念"></a>Vuex 主要的核心概念</h2><table>
+            <h2 id="Vuex-主要的核心概念"><a href="#Vuex-主要的核心概念" class="headerlink" title="Vuex 主要的核心概念"></a>Vuex 主要的核心概念</h2><ul>
+<li>state：存放所有共享資料的地方。</li>
+<li>actions：處理非同步。</li>
+<li>mutations：用於變更 store 的資料數據，還能集中監控所有數據的變化。</li>
+<li>getter：只進行包裝數據。</li>
+</ul>
+<table>
 <thead>
 <tr>
 <th>元件方法</th>
@@ -174,56 +180,17 @@
 <td>mutation(改變資料的方法)</td>
 </tr>
 </tbody></table>
-<ul>
-<li>state：存放所有共享資料的地方。</li>
-<li>actions：處理非同步。</li>
-<li>mutations：用於變更 store 的資料數據，還能集中監控所有數據的變化。</li>
-<li>getter：只進行包裝數據。</li>
-</ul>
 <p><img src="https://i.imgur.com/Tdpv93f.png" alt=""></p>
-<p><img src="https://i.imgur.com/Qr2quLb.png" alt=""></p>
-<ul>
-<li>state，驅動應用的數據源；</li>
-<li>view，以聲明方式將 state 映射到視圖；</li>
-<li>actions，響應在 view 上的用戶輸入導致的狀態變化。</li>
-</ul>
-<h2 id="元件使用-state-資料的方式"><a href="#元件使用-state-資料的方式" class="headerlink" title="元件使用 state 資料的方式"></a>元件使用 state 資料的方式</h2><p>1.</p>
-<p><code>this.$store.state.資料名稱</code></p>
-<p>2.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapState &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">computed: &#123;</span><br><span class="line">  ...mapState([<span class="string">'資料名稱'</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>在 Vuex 當中，不允許在元件直接修改 Vuex 的數據</strong>，這樣不易於之後的維護。</p>
-<p><strong>要用 mutations 來傳遞。</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 錯誤示範</span></span><br><span class="line">methods: &#123;</span><br><span class="line">  add() &#123;</span><br><span class="line">    <span class="keyword">this</span>.$store.state.count += <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="調用-mutations"><a href="#調用-mutations" class="headerlink" title="調用 mutations"></a>調用 mutations</h2><p><strong>觸發 mutations ：<code>commit</code></strong></p>
-<p>調用 mutations 有以下方式：<br>1.</p>
-<p><code>this.$store.commit(&#39;mutations 函式&#39;)</code></p>
-<p>commit 的作用就是調用某個 mutations 函式</p>
-<p>2.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapMtations &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">methods: &#123;</span><br><span class="line">  ...mapMtations([<span class="string">'mutations 函式'</span>, <span class="string">'mutations 函式'</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>不要在 mutations 函式當中執行非同步。<br><strong>如果要執行非同步，要用 action 來處理。</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 錯誤示範</span></span><br><span class="line">mutations: &#123;</span><br><span class="line">  add() &#123;</span><br><span class="line">    setTimeout(&#123;</span><br><span class="line">      state.count += <span class="number">1</span></span><br><span class="line">    &#125;,<span class="number">1000</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="actions-處理非同步"><a href="#actions-處理非同步" class="headerlink" title="actions 處理非同步"></a>actions 處理非同步</h2><p><strong>觸發 actions ：<code>dispatch</code></strong></p>
-<p>actions 只負責執行非同步操作，但在 actions 當中，不可以直接修改去 state 的數據。<br>必須透過 context.commit 來觸發 mutations 的函式。</p>
-<p><strong>使用 actions 方式：</strong></p>
-<p>1.<br><code>this.$store.dispatch(&#39;addAsync 函式&#39;)</code></p>
-<p>2.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapActions &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">methods: &#123;</span><br><span class="line">  ...mapActions([<span class="string">'actions 函式'</span>, <span class="string">'actions 函式'</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="getter"><a href="#getter" class="headerlink" title="getter"></a>getter</h2><p><strong>觸發 getters ：<code>getters</code></strong></p>
-<p>getter 用於對 store 中的數據進行加工處理形成新數據。getter 只進行包裝數據，並不會修改到 store 中的數據。如果 store 中的數據發生變化，那麼 getter 包裝出來的新數據也會出現變化。</p>
-<p><strong>使用 getters 的方式：</strong></p>
-<p>1.<br><code>this.$store.getters.getter名稱</code></p>
-<p>2.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; mapGetters &#125; <span class="keyword">from</span> <span class="string">'vuex'</span></span><br><span class="line"></span><br><span class="line">computed: &#123;</span><br><span class="line">  ...mapGetters([<span class="string">'actions 函式'</span>, <span class="string">'actions 函式'</span>])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2021/04/07/vuex-02/#more">繼續閱讀</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
