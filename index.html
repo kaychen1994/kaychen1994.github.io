@@ -118,6 +118,70 @@
 <div class="card">
     
     <div class="card-image">
+        <a href="/2021/07/16/vue-compositon-api-note/" class="image is-7by1">
+            <img class="thumbnail" src="https://i.imgur.com/DidkLNt.jpg" alt="筆記-Composition API 與 Options API 的差別">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-07-16T13:48:55.000Z">2021-07-16</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/vue/">vue</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分鐘 閱讀文 (大約 343 個字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2021/07/16/vue-compositon-api-note/">筆記-Composition API 與 Options API 的差別</a>
+            
+        </h1>
+        <div class="content">
+            <p>Vue 2.0 使用的是 Options API，不過 Vue 3 新增了 Composition API。</p>
+<h2 id="Options-API"><a href="#Options-API" class="headerlink" title="Options API"></a>Options API</h2><p><strong>所有功能依據程式邏輯進行拆分</strong></p>
+<p>以下的 <code>data</code>、<code>methods</code>、<code>computed</code>、<code>created</code> 都屬於程式邏輯。</p>
+<p>所有功能依據程式邏輯進行拆分，對於初學者比較容易學習。Options API 這麼好用，為什麼 Vue 3 還要新增 Composition API ?</p>
+<p>其實 Options API 還是有缺點，會把商業邏輯拆分至各處。尤其在元件功能越來越多時更明顯，會發現同一個商業邏輯被拆分在同地方，時間一久就不利維護。</p>
+<p>而 Vue 3 這次新增的 Composition API 就可以把商業邏輯、功能集中在同一區塊。</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2021/07/16/vue-compositon-api-note/#more">繼續閱讀</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
         <a href="/2021/04/07/vuex-02/" class="image is-7by1">
             <img class="thumbnail" src="https://i.imgur.com/S66mEH4.jpg" alt="Vuex 基本核心概念筆記 [02]">
         </a>
@@ -725,75 +789,6 @@
 
 
 
-    
-<div class="card">
-    
-    <div class="card-image">
-        <a href="/2021/03/19/js-es6/" class="image is-7by1">
-            <img class="thumbnail" src="https://i.imgur.com/8L3aXuL.jpg" alt="JS 觀念 - ES6 縮寫">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-03-19T13:00:31.000Z">2021-03-19</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/JavaScript/">JavaScript</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 分鐘 閱讀文 (大約 431 個字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/03/19/js-es6/">JS 觀念 - ES6 縮寫</a>
-            
-        </h1>
-        <div class="content">
-            <h3 id="什麼是語法糖"><a href="#什麼是語法糖" class="headerlink" title="什麼是語法糖?"></a>什麼是<strong>語法糖</strong>?</h3><p>語法糖讓程式更加簡潔，有更高的可讀性。語法糖不會影響程式運作，邏輯與當前 JS 一致。</p>
-<h2 id="物件字面值-Object-literals"><a href="#物件字面值-Object-literals" class="headerlink" title="物件字面值 Object literals"></a>物件字面值 Object literals</h2><ul>
-<li><h3 id="物件內的函式"><a href="#物件內的函式" class="headerlink" title="物件內的函式"></a>物件內的函式</h3></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> apple = &#123;</span><br><span class="line">  name: <span class="string">'蘋果'</span>,</span><br><span class="line">  fn: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(apple.fn());</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>直接將 <code>fn: function() {}</code> 改為 <code>fn() {}</code> 即可</p>
-</blockquote>
-<p><img src="https://i.imgur.com/wVh1SzL.png" alt=""></p>
-<hr>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2021/03/19/js-es6/#more">繼續閱讀</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -858,7 +853,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            17
+                            18
                         </p>
                     </a>
                 </div>
@@ -882,7 +877,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            14
+                            15
                         </p>
                     </a>
                 </div>
@@ -1019,7 +1014,7 @@
                 <span class="level-item">vue</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li>
             </ul>
@@ -1032,7 +1027,7 @@
         <h3 class="menu-label">
             標籤雲
         </h3>
-        <a href="/tags/Component/" style="font-size: 10px;">Component</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/HEXO/" style="font-size: 12.5px;">HEXO</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/axios/" style="font-size: 10px;">axios</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/flex/" style="font-size: 12.5px;">flex</a> <a href="/tags/git/" style="font-size: 17.5px;">git</a> <a href="/tags/github-pages/" style="font-size: 10px;">github pages</a> <a href="/tags/vue/" style="font-size: 17.5px;">vue</a> <a href="/tags/vuex/" style="font-size: 12.5px;">vuex</a> <a href="/tags/%E5%88%87%E7%89%88/" style="font-size: 15px;">切版</a>
+        <a href="/tags/Component/" style="font-size: 10px;">Component</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/HEXO/" style="font-size: 12.5px;">HEXO</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Promise/" style="font-size: 10px;">Promise</a> <a href="/tags/axios/" style="font-size: 10px;">axios</a> <a href="/tags/composition-API/" style="font-size: 10px;">composition API</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/flex/" style="font-size: 12.5px;">flex</a> <a href="/tags/git/" style="font-size: 17.5px;">git</a> <a href="/tags/github-pages/" style="font-size: 10px;">github pages</a> <a href="/tags/vue/" style="font-size: 20px;">vue</a> <a href="/tags/vuex/" style="font-size: 12.5px;">vuex</a> <a href="/tags/%E5%88%87%E7%89%88/" style="font-size: 15px;">切版</a>
     </div>
 </div>
     
@@ -1044,6 +1039,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2021/07/16/vue-compositon-api-note/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.imgur.com/DidkLNt.jpg" alt="筆記-Composition API 與 Options API 的差別">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-16T13:48:55.000Z">2021-07-16</time></div>
+                    <a href="/2021/07/16/vue-compositon-api-note/" class="title has-link-black-ter is-size-6 has-text-weight-normal">筆記-Composition API 與 Options API 的差別</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/vue/">vue</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -1121,25 +1135,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2021/03/28/git-learning/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://i.imgur.com/T7vJYZ2.png" alt="git 學習資源 &amp; 基礎指令">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-03-28T05:14:38.000Z">2021-03-28</time></div>
-                    <a href="/2021/03/28/git-learning/" class="title has-link-black-ter is-size-6 has-text-weight-normal">git 學習資源 &amp; 基礎指令</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/git/">git</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -1150,6 +1145,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2021/04/">
@@ -1280,6 +1286,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/composition-API/">
+                        <span class="tag">composition API</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/css/">
                         <span class="tag">css</span>
                         <span class="tag is-grey">3</span>
@@ -1310,7 +1323,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/vue/">
                         <span class="tag">vue</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
@@ -1352,6 +1365,25 @@
         
         <article class="media">
             
+            <a href="/2021/07/16/vue-compositon-api-note/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://i.imgur.com/DidkLNt.jpg" alt="筆記-Composition API 與 Options API 的差別">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-16T13:48:55.000Z">2021-07-16</time></div>
+                    <a href="/2021/07/16/vue-compositon-api-note/" class="title has-link-black-ter is-size-6 has-text-weight-normal">筆記-Composition API 與 Options API 的差別</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/vue/">vue</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2021/04/07/vuex-02/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://i.imgur.com/S66mEH4.jpg" alt="Vuex 基本核心概念筆記 [02]">
@@ -1426,25 +1458,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2021/03/28/git-learning/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://i.imgur.com/T7vJYZ2.png" alt="git 學習資源 &amp; 基礎指令">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-03-28T05:14:38.000Z">2021-03-28</time></div>
-                    <a href="/2021/03/28/git-learning/" class="title has-link-black-ter is-size-6 has-text-weight-normal">git 學習資源 &amp; 基礎指令</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/git/">git</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -1455,6 +1468,17 @@
             彙整
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/07/">
+                <span class="level-start">
+                    <span class="level-item">七月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2021/04/">
@@ -1585,6 +1609,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/composition-API/">
+                        <span class="tag">composition API</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/css/">
                         <span class="tag">css</span>
                         <span class="tag is-grey">3</span>
@@ -1615,7 +1646,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/vue/">
                         <span class="tag">vue</span>
-                        <span class="tag is-grey">4</span>
+                        <span class="tag is-grey">5</span>
                     </a>
                 </div>
                 
